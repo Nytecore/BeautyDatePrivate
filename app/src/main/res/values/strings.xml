@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BeautyDate</string>
+    
+    <!-- Welcome Screen -->
+    <string name="welcome_title">BeautyDate\'e Hoş Geldiniz</string>
+    <string name="welcome_subtitle">Tüm güzellik randevularınızı kolayca yönetin ve işletmenizi daha hızlı büyütün!</string>
+    <string name="loading">Yükleniyor...</string>
+    
+    <!-- Authentication -->
+    <string name="login">Giriş Yap</string>
+    <string name="register">Kullanıcı Oluştur</string>
+    <string name="email">E-posta</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Parola</string>
+    <string name="confirm_password">Parolayı Onayla</string>
+    <string name="forgot_password">Parolamı Unuttum?</string>
+    <string name="login_success">Giriş başarılı</string>
+    <string name="register_success">Kayıt başarılı</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="welcome_message">BeautyDate\'e Hoş Geldiniz</string>
+    <string name="welcome_back">Tekrar Hoş Geldiniz</string>
+    <string name="manage_appointments">Randevularınızı güvenli ve kolay bir şekilde yönetin.</string>
+    <string name="remember_username">Kullanıcı Adını Hatırla</string>
+    <string name="email_not_verified">Lütfen E-posta adresinizi doğrulayın.</string>
+    <string name="email_verification_sent">Lütfen e-posta adresinizi doğrulayın.</string>
+    <string name="email_verification_required">E-posta doğrulaması gerekli</string>
+    
+    <!-- Business Details -->
+    <string name="business_name">İşletme Adı</string>
+    <string name="phone_number">Telefon Numarası</string>
+    <string name="address">Adres</string>
+    <string name="tax_number">Vergi Numarası (İsteğe Bağlı)</string>
+    <string name="account_details">Hesap Bilgileri</string>
+    <string name="business_details">İşletme Bilgileri</string>
+    
+    <!-- Password Validation -->
+    <string name="password_info_title">Neden güçlü parola?</string>
+    <string name="password_info_message">İşletmenizi ve müşteri verilerinizi güvende tutmak için en az 8 karakter, 1 büyük harf, 1 küçük harf ve 1 rakam içeren güçlü bir parola gerektiriyoruz.</string>
+    <string name="password_helper_text">En az 8 karakter, 1 büyük harf, 1 küçük harf, 1 rakam.</string>
+    <string name="password_validation_error">Parola en az 8 karakter, 1 büyük harf, 1 küçük harf ve 1 rakam içermelidir.</string>
+    
+    <!-- Navigation -->
+    <string name="home">Ana Sayfa</string>
+    <string name="profile">Profil</string>
+    <string name="matches">Eşleşmeler</string>
+    <string name="messages">Mesajlar</string>
+    <string name="settings">Ayarlar</string>
+    
+    <!-- Profile -->
+    <string name="edit_profile">Profili Düzenle</string>
+    <string name="name">İsim</string>
+    <string name="age">Yaş</string>
+    <string name="bio">Açıklama</string>
+    <string name="location">Konum</string>
+    <string name="save">Kaydet</string>
+    <string name="cancel">İptal</string>
+    
+    <!-- Matches -->
+    <string name="no_matches">Henüz eşleşme bulunamadı</string>
+    <string name="like">Beğen</string>
+    <string name="dislike">Beğenme</string>
+    <string name="super_like">Süper Beğen</string>
+    
+    <!-- Messages -->
+    <string name="no_messages">Henüz mesaj yok</string>
+    <string name="type_message">Mesaj yazın...</string>
+    <string name="send">Gönder</string>
+    
+    <!-- Settings -->
+    <string name="language">Dil</string>
+    <string name="notifications">Bildirimler</string>
+    <string name="privacy">Gizlilik</string>
+    <string name="about">Hakkında</string>
+    
+    <!-- Common -->
+    <string name="error">Hata</string>
+    <string name="success">Başarılı</string>
+    <string name="ok">Tamam</string>
+    <string name="retry">Tekrar Dene</string>
+    <string name="back">Geri</string>
+    <string name="next">İleri</string>
+    <string name="done">Tamamlandı</string>
+    <string name="info">Bilgi</string>
+    <string name="close">Kapat</string>
+    
+    <!-- Error messages -->
+    <string name="error_invalid_email">Geçersiz e-posta adresi</string>
+    <string name="error_invalid_password">Parola en az 6 karakter olmalıdır</string>
+    <string name="error_passwords_not_match">Parolalar eşleşmiyor</string>
+    <string name="error_network">Ağ hatası. Lütfen bağlantınızı kontrol edin.</string>
+    <string name="error_unknown">Bilinmeyen bir hata oluştu</string>
+    <string name="error_field_required">Bu alan zorunludur</string>
+    <string name="error_invalid_phone">Geçersiz telefon numarası</string>
+    
+    <!-- Additional strings for better UX -->
+    <string name="already_have_account">Zaten üye misiniz?</string>
+    <string name="dont_have_account">Hesabınız yok mu?</string>
+    <string name="create_account">Hesap Oluştur</string>
+    <string name="sign_in">Giriş Yap</string>
+    <string name="join_beautydate">İşletme Profilinizi Oluşturun</string>
+    <string name="create_your_profile">Profilinizi Oluşturun</string>
+    <string name="enter_your_details">Bilgilerinizi Girin</string>
+    <string name="full_name">Ad Soyad</string>
+    <string name="your_age">Yaşınız</string>
+    <string name="about_you">Hakkınızda</string>
+    <string name="tell_us_about_yourself">Kendiniz hakkında bize anlatın</string>
+    <string name="create_account_button">Kullanıcı Oluştur!</string>
+    <string name="sign_in_button">Giriş Yap</string>
+    <string name="or">veya</string>
+    <string name="continue_with_google">Google ile devam et</string>
+    <string name="continue_with_facebook">Facebook ile devam et</string>
+    <string name="terms_and_conditions">Kullanım şartları ve gizlilik politikası</string>
+    <string name="by_creating_account">Hesap oluşturarak</string>
+    <string name="you_agree">kabul etmiş olursunuz</string>
+    
+    <!-- Customer Management -->
+    <string name="customers">Müşteriler</string>
+    <string name="customer_details">Müşteri Detayları</string>
+    <string name="edit_customer">Müşteri Düzenle</string>
+    <string name="add_customer">Müşteri Ekle</string>
+    <string name="delete_customer">Müşteriyi Sil</string>
+    <string name="update_customer">Müşteriyi Güncelle</string>
+    <string name="first_name">Ad</string>
+    <string name="last_name">Soyad</string>
+    <string name="birth_date">Doğum Tarihi</string>
+    <string name="gender">Cinsiyet</string>
+    <string name="notes">Notlar</string>
+    <string name="file_number">Dosya Numarası</string>
+    <string name="personal_info">Kişisel Bilgiler</string>
+    <string name="contact_info">İletişim Bilgileri</string>
+    <string name="additional_info">Ek Bilgiler</string>
+    <string name="record_info">Kayıt Bilgileri</string>
+    <string name="created_at">Kayıt Tarihi</string>
+    <string name="updated_at">Son Güncelleme</string>
+    <string name="loading_customers">Müşteriler yükleniyor...</string>
+    <string name="syncing_data">Veriler senkronize ediliyor...</string>
+    <string name="sync_completed">Senkronizasyon tamamlandı</string>
+    <string name="processing">İşlem yapılıyor...</string>
+    <string name="updating_customer">Müşteri güncelleniyor...</string>
+    <string name="deleting_customer">Müşteri siliniyor...</string>
+    <string name="no_customers_found">Henüz müşteri bulunmuyor</string>
+    <string name="add_first_customer">İlk müşterinizi eklemek için + butonuna tıklayın</string>
+    <string name="search_no_results">Arama sonucu bulunamadı</string>
+    <string name="delete_confirmation_title">Müşteriyi Sil</string>
+    <string name="delete_confirmation_message">%1$s adlı müşteriyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
+    <string name="customer_saved_success">%1$s başarılı bir şekilde kaydedildi</string>
+    <string name="customer_updated_success">%1$s başarılı bir şekilde güncellendi</string>
+    <string name="customer_deleted_success">%1$s başarılı bir şekilde silindi</string>
+    <string name="refresh">Yenile</string>
+    <string name="edit">Düzenle</string>
+    <string name="delete">Sil</string>
+    <string name="update">Güncelle</string>
+    <string name="not_specified">Belirtilmemiş</string>
+    <string name="male">Erkek</string>
+    <string name="female">Kadın</string>
+    <string name="other">Diğer</string>
+    <string name="optional">Opsiyonel</string>
+    <string name="notes_placeholder">Müşteri ile ilgili notlarınızı ekleyin</string>
+    <string name="sync_success">Veriler başarıyla senkronize edildi</string>
+    <string name="sync_error">Senkronizasyon hatası</string>
+    <string name="customer_loading_error">Müşteri bilgileri yüklenirken hata oluştu</string>
+    <string name="customer_save_error">Müşteri kaydedilirken hata oluştu</string>
+    <string name="customer_update_error">Müşteri güncellenirken hata oluştu</string>
+    <string name="customer_delete_error">Müşteri silinirken hata oluştu</string>
+    <string name="authentication_required">Kullanıcı oturumu gerekli. Lütfen giriş yapın.</string>
+    <string name="user_info_loading">Kullanıcı bilgileri yükleniyor...</string>
+    
+    <!-- Appointment Strings -->
+    <string name="appointments">Randevular</string>
+    <string name="calendar">Takvim</string>
+    <string name="visits">Randevular</string>
+    <string name="create_first_appointment">İlk Randevuyu Oluştur</string>
+    <string name="appointment">Randevu</string>
+    <string name="add_appointment">Randevu Ekle</string>
+    <string name="new_appointment">Yeni Randevu</string>
+    <string name="appointment_details">Randevu Detayları</string>
+    <string name="appointment_date">Randevu Tarihi</string>
+    <string name="appointment_time">Randevu Saati</string>
+    <string name="appointment_status">Randevu Durumu</string>
+    <string name="appointment_notes">Randevu Notları</string>
+    <string name="create_appointment">Randevu Oluştur</string>
+    <string name="update_appointment">Randevu Güncelle</string>
+    <string name="delete_appointment">Randevu Sil</string>
+    <string name="cancel_appointment">Randevu İptal Et</string>
+    <string name="complete_appointment">Randevu Tamamla</string>
+    <string name="appointment_created">Randevu başarıyla oluşturuldu</string>
+    <string name="appointment_updated">Randevu başarıyla güncellendi</string>
+    <string name="appointment_deleted">Randevu başarıyla silindi</string>
+    <string name="appointment_cancelled">Randevu iptal edildi</string>
+    <string name="appointment_completed">Randevu tamamlandı</string>
+    <string name="appointment_no_show">Müşteri gelmedi</string>
+    <string name="appointment_loading">Randevular yükleniyor...</string>
+    <string name="appointment_error">Randevu işleminde hata oluştu</string>
+    <string name="appointment_save_error">Randevu kaydedilirken hata oluştu</string>
+    <string name="appointment_delete_error">Randevu silinirken hata oluştu</string>
+    <string name="appointment_update_error">Randevu güncellenirken hata oluştu</string>
+    <string name="no_appointments">Henüz randevu eklenmemiş</string>
+    <string name="appointment_search_hint">Müşteri adı, telefon veya hizmet ara...</string>
+    <string name="appointment_filter_all">Tümü</string>
+    <string name="appointment_status_scheduled">Planlandı</string>
+    <string name="appointment_status_completed">Tamamlandı</string>
+    <string name="appointment_status_cancelled">İptal Edildi</string>
+    <string name="appointment_status_no_show">Gelmedi</string>
+    <string name="select_customer">Müşteri Seçin</string>
+    <string name="select_date">Tarih Seçiniz</string>
+    <string name="select_time">Saat Seçiniz</string>
+    <string name="service_name">Hizmet Adı</string>
+    <string name="service_price">Hizmet Fiyatı</string>
+    <string name="customer_info">Müşteri Bilgileri</string>
+    <string name="service_info">Hizmet Bilgileri</string>
+    <string name="date_time_info">Tarih ve Saat</string>
+    <string name="appointment_confirm_delete">Bu randevuyu silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
+    <string name="appointment_actions">İşlemler</string>
+    <string name="appointment_sync">Randevular senkronize ediliyor...</string>
+    <string name="appointment_sync_success">Randevular başarıyla senkronize edildi</string>
+    <string name="appointment_sync_error">Randevu senkronizasyon hatası</string>
+    <string name="no_search_results">Arama kriterinize uygun randevu bulunamadı</string>
+    <string name="clear_filters">Filtreleri Temizle</string>
+    <string name="creating_appointment">Randevu oluşturuluyor...</string>
+    <string name="fill_required_fields">Lütfen tüm gerekli alanları doldurun</string>
+    
+    <!-- Working Hours Strings -->
+    <string name="working_hours_title">Çalışma Saatlerimiz</string>
+    <string name="working_hours_reset">Varsayılana Döndür</string>
+    <string name="working_hours_sync">Senkronize Et</string>
+    <string name="working_hours_apply_all">Tüm Günlere Uygula</string>
+    <string name="working_hours_apply_weekdays">Hafta İçi Günlere Uygula</string>
+    <string name="working_hours_apply_all_dialog_title">Tüm Günlere Uygula</string>
+    <string name="working_hours_apply_all_dialog_desc">Seçeceğiniz çalışma saatlerini tüm günlere uygulamak istediğinizden emin misiniz?</string>
+    <string name="working_hours_apply_weekdays_dialog_title">Hafta İçi Günlere Uygula</string>
+    <string name="working_hours_apply_weekdays_dialog_desc">Seçeceğiniz çalışma saatlerini sadece hafta içi günlere (Pazartesi-Cuma) uygulamak istediğinizden emin misiniz?</string>
+    <string name="working_hours_start_time">Açılış Saati</string>
+    <string name="working_hours_end_time">Kapanış Saati</string>
+    <string name="working_hours_reset_confirm_title">Varsayılana Döndür</string>
+    <string name="working_hours_reset_confirm_desc">Tüm çalışma saatlerini varsayılan ayarlara döndürmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
+    <string name="working_hours_open">Açık</string>
+    <string name="working_hours_closed">Kapalı</string>
+    <string name="working_hours_edit_title">%s Çalışma Saatleri</string>
+    <string name="working_hours_edit_desc">Bu günün çalışma saatlerini düzenleyin</string>
+    <string name="working_hours_is_open">Bugün açık</string>
+    <string name="working_hours_monday">Pazartesi</string>
+    <string name="working_hours_tuesday">Salı</string>
+    <string name="working_hours_wednesday">Çarşamba</string>
+    <string name="working_hours_thursday">Perşembe</string>
+    <string name="working_hours_friday">Cuma</string>
+    <string name="working_hours_saturday">Cumartesi</string>
+    <string name="working_hours_sunday">Pazar</string>
+    <string name="working_hours_status_open" formatted="false">%s - %s</string>
+    <string name="working_hours_status_closed">Kapalı</string>
+    <string name="working_hours_save_success">Çalışma saatleri başarıyla kaydedildi</string>
+    <string name="working_hours_sync_success">Çalışma saatleri senkronize edildi</string>
+    <string name="working_hours_validation_error">Açılış saati kapanış saatinden önce olmalıdır</string>
+    
+    <!-- Toast Messages -->
+    <string name="toast_day_opened">%s açık duruma getirildi</string>
+    <string name="toast_day_closed">%s kapalı duruma getirildi</string>
+    <string name="toast_hours_updated">%s çalışma saatleri güncellendi</string>
+    <string name="toast_sync_success">Çalışma saatleri senkronize edildi</string>
+    <string name="toast_reset_success">Varsayılan ayarlara döndürüldü</string>
+    <string name="toast_apply_all_success">Tüm günlere uygulandı (Pazar hariç)</string>
+    <string name="toast_apply_weekdays_success">Hafta içi günlere uygulandı</string>
+    
+    <!-- Weekend Status -->
+    <string name="working_hours_apply_weekdays_weekend_closed">Hafta İçi</string>
+    <string name="working_hours_apply_weekdays_weekend_open_without_sunday">Hafta İçi</string>
+    <string name="working_hours_apply_weekdays_weekend_open">Hafta İçi</string>
+    
+    <!-- Updated Dialog Descriptions -->
+    <string name="working_hours_apply_all_dialog_desc_updated">Seçeceğiniz çalışma saatlerini tüm günlere uygulamak istediğinizden emin misiniz? (Pazar günü kapalı kalacak)</string>
+    <string name="working_hours_apply_weekdays_dialog_desc_weekend_closed">Seçeceğiniz çalışma saatlerini sadece hafta içi günlere (Pazartesi-Cuma) uygulamak istediğinizden emin misiniz? Hafta sonu kapalı kalacak.</string>
+    <string name="working_hours_apply_weekdays_dialog_desc_weekend_open">Seçeceğiniz çalışma saatlerini sadece hafta içi günlere (Pazartesi-Cuma) uygulamak istediğinizden emin misiniz? Hafta sonu açık kalacak (Pazar hariç).</string>
+    <string name="working_hours_reset_confirm_desc_updated">Tüm çalışma saatlerini varsayılan ayarlara döndürmek istediğinizden emin misiniz? (Pazar günü kapalı kalacak) Bu işlem geri alınamaz.</string>
+    
+    <!-- Finance Management -->
+    <string name="finance_title">Finans Yönetimi</string>
+    <string name="finance_summary">Finansal Özet</string>
+    <string name="finance_credit_card">Kredi Kartı</string>
+    <string name="finance_cash">Nakit</string>
+    <string name="finance_total_revenue">Toplam Gelir</string>
+    <string name="finance_payment_method">Ödeme Yöntemi</string>
+    <string name="finance_payment_status">Ödeme Durumu</string>
+    <string name="finance_transaction_type">İşlem Türü</string>
+    <string name="finance_date_range">Tarih Aralığı</string>
+    <string name="finance_start_date">Başlangıç Tarihi</string>
+    <string name="finance_end_date">Bitiş Tarihi</string>
+    <string name="finance_search">Arama</string>
+    <string name="finance_filters">Filtreler</string>
+    <string name="finance_clear_filters">Filtreleri Temizle</string>
+    <string name="finance_remove_date_filter">Tarih Filtresini Kaldır</string>
+    <string name="finance_all">Tümü</string>
+    
+    <!-- Payment Status -->
+    <string name="payment_status_pending">Beklemede</string>
+    <string name="payment_status_completed">Tamamlandı</string>
+    <string name="payment_status_failed">Başarısız</string>
+    <string name="payment_status_refunded">İade Edildi</string>
+    
+    <!-- Transaction Types -->
+    <string name="transaction_type_income">Gelir</string>
+    <string name="transaction_type_expense">Gider</string>
+    
+    <!-- Empty States -->
+    <string name="finance_no_credit_payments">Henüz kredi kartı ödemesi bulunmuyor</string>
+    <string name="finance_no_cash_transactions">Henüz nakit işlemi bulunmuyor</string>
+    
+    <!-- Common Strings -->
+    <string name="apply">Uygula</string>
+</resources>

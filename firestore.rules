@@ -1,0 +1,240 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function for business ownership validation
+    function isOwner(businessId) {
+      return request.auth != null && request.auth.uid == businessId;
+    }
+    
+    // Helper function for business data validation
+    function isBusinessOwner() {
+      return request.auth != null && resource.data.businessId == request.auth.uid;
+    }
+    
+    // User documents - strict user-specific access
+    match /users/{userId} {
+      allow read, write, create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Username mapping for login system - restricted write access
+    match /usernames/{username} {
+      allow read: if true;
+      allow write: if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+    
+    // Customer management - business owner access with businessId isolation
+    match /customers/{customerId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Employee management - business owner access with businessId isolation
+    match /employees/{employeeId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+
+    // Services management - business owner access with businessId isolation
+    match /services/{serviceId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Customer Notes - business owner access with businessId isolation
+    match /customer_notes/{noteId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Appointments - business owner access with enhanced validation
+    match /appointments/{appointmentId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['customerId', 'serviceId', 'appointmentDate', 'appointmentTime', 'status', 'businessId'])
+        && request.resource.data.businessId == request.auth.uid
+        && request.resource.data.status in ['SCHEDULED', 'COMPLETED', 'CANCELLED', 'NO_SHOW'];
+        
+      allow update: if request.auth != null 
+        && resource.data.businessId == request.auth.uid
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow delete: if isBusinessOwner();
+    }
+    
+    // Working Hours - business-specific access
+    match /workingHours/{documentId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Alternative working hours pattern (backup compatibility)
+    match /working_hours/{workingHourId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Calendar Events - business owner access with businessId isolation
+    match /calendar_events/{eventId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Appointment Statistics - business analytics with isolation
+    match /appointment_stats/{statId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId'])
+        && request.resource.data.businessId == request.auth.uid;
+      allow update, delete: if isBusinessOwner();
+    }
+    
+    // Business Settings - business-specific configurations
+    match /business_settings/{businessId} {
+      allow read, write, create: if isOwner(businessId);
+    }
+    
+    // FINANCE SYSTEM - Payment and Transaction Management with businessId isolation
+    match /payments/{paymentId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['appointmentId', 'amount', 'method', 'status', 'businessId', 'createdAt'])
+        && request.resource.data.businessId == request.auth.uid
+        && request.resource.data.status in ['PENDING', 'COMPLETED', 'FAILED', 'REFUNDED']
+        && request.resource.data.method in ['CASH', 'CARD', 'BANK_TRANSFER', 'OTHER'];
+        
+      allow update: if request.auth != null 
+        && resource.data.businessId == request.auth.uid
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow delete: if isBusinessOwner();
+    }
+    
+    match /transactions/{transactionId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['type', 'amount', 'description', 'businessId', 'createdAt'])
+        && request.resource.data.businessId == request.auth.uid
+        && request.resource.data.type in ['INCOME', 'EXPENSE'];
+        
+      allow update: if request.auth != null 
+        && resource.data.businessId == request.auth.uid
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow delete: if isBusinessOwner();
+    }
+    
+    // STATISTICS SYSTEM - Business Analytics with businessId isolation
+    match /daily_statistics/{statisticId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId', 'date', 'revenue', 'appointmentCount'])
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow update: if request.auth != null 
+        && resource.data.businessId == request.auth.uid
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow delete: if isBusinessOwner();
+    }
+    
+    match /monthly_statistics/{statisticId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId', 'year', 'month'])
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow update: if request.auth != null 
+        && resource.data.businessId == request.auth.uid
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow delete: if isBusinessOwner();
+    }
+    
+    match /yearly_statistics/{statisticId} {
+      allow read, list: if request.auth != null && resource.data.businessId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['businessId', 'year'])
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow update: if request.auth != null 
+        && resource.data.businessId == request.auth.uid
+        && request.resource.data.businessId == request.auth.uid;
+        
+      allow delete: if isBusinessOwner();
+    }
+    
+    // TUTORIAL SYSTEM - User-specific tutorial progress
+    match /tutorial_progress/{progressId} {
+      allow read, list: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['userId', 'tutorialId'])
+        && request.resource.data.userId == request.auth.uid;
+        
+      allow update: if request.auth != null 
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == request.auth.uid;
+        
+      allow delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+    
+    match /tutorial_preferences/{userId} {
+      allow read, write, create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // FEEDBACK SYSTEM - User feedback with user isolation
+    match /feedback/{feedbackId} {
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['userId', 'message', 'createdAt'])
+        && request.resource.data.userId == request.auth.uid;
+        
+      // No update/delete to maintain feedback integrity
+    }
+    
+    // APP CONFIGURATION - Global app settings (admin-only write access)
+    match /app_config/{configId} {
+      allow read: if request.auth != null;
+      // Write access restricted - only for admin users
+      // allow write: if request.auth != null && request.auth.token.admin == true;
+    }
+    
+    // AUDIT LOGS - Security and activity tracking (read-only, user-specific)
+    match /audit_logs/{logId} {
+      allow create: if request.auth != null 
+        && request.resource.data.keys().hasAll(['userId'])
+        && request.resource.data.userId == request.auth.uid;
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      // No update/delete to maintain audit integrity
+    }
+  }
+}

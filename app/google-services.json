@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "592496692957",
+    "project_id": "beautydate-48dd7",
+    "storage_bucket": "beautydate-48dd7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592496692957:android:231124971d7e66eb3d1534",
+        "android_client_info": {
+          "package_name": "com.example.beautydate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfT4pO0wlvm_5ys37DD8e1tnnkEKOHctI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
